@@ -24,8 +24,8 @@ html {
     margin: 0 auto;
     line-height:2em;
     color: darkslategray;
-    padding-left: 4em;
-    padding-right: 4em;
+    padding-left: 1em;
+    padding-right: 1em;
 }
 
 .move-graph, .pEco-graph, .report-graph{
