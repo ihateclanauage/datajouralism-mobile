@@ -31,32 +31,26 @@ html {
 .move-graph, .pEco-graph, .report-graph{
     margin: 0 auto;
     align-content: center;
-    width: 45rem;
 }
 .expen-graph, .urban-graph {
     margin: 0 auto;
     align-content: center;
-    width: 45rem;
 }
 
 .mEco-graph{
     margin: 0 auto;
-    width: 48rem;
 }
 
 .greatIncrease-graph {
     margin: 0 auto;
-    width: 48rem;
 }
 
 .urbanold-graph, .sentiment-graph {
     margin: 0 auto;
-    width: 56rem;
 }
 
 .old-graph {
     margin: 0 auto;
-    width: 56rem;
 }
 
 .bulletComment-graph{
@@ -66,7 +60,6 @@ html {
 }
 
 .bulletContent-graph {
-    width: 56rem;
     margin: 0 auto;
 }
 
@@ -77,13 +70,11 @@ html {
 
 .unfairN-graph, .unfairStr-graph {
     margin: 0 auto;
-    width: 54rem;
 }
 
 
 .yesWeCan-graph {
     margin: 0 auto;
-    width: 54rem;
 }
 
 .cell {
