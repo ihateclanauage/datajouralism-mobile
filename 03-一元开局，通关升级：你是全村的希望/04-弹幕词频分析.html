@@ -2,16 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="42ee1e92dd874df39760fbe70987ba32" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="98ec3042a8ff4dc694ece71e1b0d46fa" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_42ee1e92dd874df39760fbe70987ba32 = echarts.init(
-            document.getElementById('42ee1e92dd874df39760fbe70987ba32'), 'white', {renderer: 'canvas'});
-        var option_42ee1e92dd874df39760fbe70987ba32 = {
+        var chart_98ec3042a8ff4dc694ece71e1b0d46fa = echarts.init(
+            document.getElementById('98ec3042a8ff4dc694ece71e1b0d46fa'), 'white', {renderer: 'canvas'});
+        var option_98ec3042a8ff4dc694ece71e1b0d46fa = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -91,7 +98,17 @@
                 14,
                 14,
                 13,
-                13
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                13,
+                12,
+                12,
+                12,
+                12
             ],
             "showBackground": false,
             "barMinHeight": 0,
@@ -105,7 +122,7 @@
             "zlevel": 0,
             "z": 2,
             "label": {
-                "show": true,
+                "show": false,
                 "position": "top",
                 "margin": 8
             }
@@ -119,7 +136,7 @@
             "selected": {
                 "\u5173\u952e\u8bcd\u8bcd\u9891": true
             },
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -128,10 +145,10 @@
     ],
     "tooltip": {
         "show": true,
-        "trigger": "item",
+        "trigger": "axis",
         "triggerOn": "mousemove|click",
         "axisPointer": {
-            "type": "line"
+            "type": "cross"
         },
         "showContent": true,
         "alwaysShowContent": false,
@@ -204,7 +221,17 @@
                 "\u4fdd\u5b9a",
                 "\u8bdd",
                 "\u6e05\u6670",
-                "\u6c34\u5e73"
+                "\u6c34\u5e73",
+                "\u6b66\u6d77",
+                "\u8d44\u6e90",
+                "\u652f\u6301",
+                "\u8bca\u6240",
+                "\u8d8a\u5267",
+                "\u57fa\u5c42",
+                "\u633a",
+                "\u793e\u533a",
+                "\u597d\u50cf",
+                "\u88d9\u5b50"
             ]
         }
     ],
@@ -262,7 +289,15 @@
         }
     ]
 };
-        chart_42ee1e92dd874df39760fbe70987ba32.setOption(option_42ee1e92dd874df39760fbe70987ba32);
+        chart_98ec3042a8ff4dc694ece71e1b0d46fa.setOption(option_98ec3042a8ff4dc694ece71e1b0d46fa);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>

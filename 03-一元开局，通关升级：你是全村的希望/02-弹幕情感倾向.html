@@ -2,16 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="bf8c58538cb241dba5438a66be204ebb" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="dae679d996de4290a139d5f16a46d9d7" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_bf8c58538cb241dba5438a66be204ebb = echarts.init(
-            document.getElementById('bf8c58538cb241dba5438a66be204ebb'), 'white', {renderer: 'canvas'});
-        var option_bf8c58538cb241dba5438a66be204ebb = {
+        var chart_dae679d996de4290a139d5f16a46d9d7 = echarts.init(
+            document.getElementById('dae679d996de4290a139d5f16a46d9d7'), 'white', {renderer: 'canvas'});
+        var option_dae679d996de4290a139d5f16a46d9d7 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -157,7 +164,15 @@
         }
     ]
 };
-        chart_bf8c58538cb241dba5438a66be204ebb.setOption(option_bf8c58538cb241dba5438a66be204ebb);
+        chart_dae679d996de4290a139d5f16a46d9d7.setOption(option_dae679d996de4290a139d5f16a46d9d7);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>

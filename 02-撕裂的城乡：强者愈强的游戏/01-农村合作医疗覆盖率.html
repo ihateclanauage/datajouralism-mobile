@@ -2,16 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="d85ac60c6da34ddabe856360da2a32f7" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="8ef9b8c6dcc94930a278dfe5def123f7" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_d85ac60c6da34ddabe856360da2a32f7 = echarts.init(
-            document.getElementById('d85ac60c6da34ddabe856360da2a32f7'), 'white', {renderer: 'canvas'});
-        var option_d85ac60c6da34ddabe856360da2a32f7 = {
+        var chart_8ef9b8c6dcc94930a278dfe5def123f7 = echarts.init(
+            document.getElementById('8ef9b8c6dcc94930a278dfe5def123f7'), 'white', {renderer: 'canvas'});
+        var option_8ef9b8c6dcc94930a278dfe5def123f7 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -51,8 +58,6 @@
             "type": "line",
             "name": "\u8986\u76d6\u7387",
             "connectNulls": false,
-            "xAxisIndex": 0,
-            "yAxisIndex": 0,
             "symbolSize": 4,
             "showSymbol": true,
             "smooth": false,
@@ -154,7 +159,7 @@
             "selected": {
                 "\u8986\u76d6\u7387": true
             },
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -309,23 +314,17 @@
                 }
             }
         }
-    },
-    "grid": [
-        {
-            "show": false,
-            "zlevel": 0,
-            "z": 2,
-            "left": "3%",
-            "width": "72%",
-            "height": "50%",
-            "containLabel": false,
-            "backgroundColor": "transparent",
-            "borderColor": "#ccc",
-            "borderWidth": 1
-        }
-    ]
+    }
 };
-        chart_d85ac60c6da34ddabe856360da2a32f7.setOption(option_d85ac60c6da34ddabe856360da2a32f7);
+        chart_8ef9b8c6dcc94930a278dfe5def123f7.setOption(option_8ef9b8c6dcc94930a278dfe5def123f7);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>

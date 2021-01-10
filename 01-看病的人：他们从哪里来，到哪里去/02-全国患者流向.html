@@ -2,17 +2,24 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
         <script type="text/javascript" src="https://assets.pyecharts.org/assets/maps/china.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="cb674245ae2946619671c0d49ff7491d" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="cf249d9fcfad400cb9d638608e7ebddd" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_cb674245ae2946619671c0d49ff7491d = echarts.init(
-            document.getElementById('cb674245ae2946619671c0d49ff7491d'), 'white', {renderer: 'canvas'});
-        var option_cb674245ae2946619671c0d49ff7491d = {
+        var chart_cf249d9fcfad400cb9d638608e7ebddd = echarts.init(
+            document.getElementById('cf249d9fcfad400cb9d638608e7ebddd'), 'white', {renderer: 'canvas'});
+        var option_cf249d9fcfad400cb9d638608e7ebddd = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -456,7 +463,7 @@
                 "\u5404\u7701\u60a3\u8005\u6d41\u5411": true,
                 "\u60a3\u8005\u6d41\u5165/\u6d41\u51fa\u767e\u5206\u6bd4(%)": true
             },
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -523,7 +530,15 @@
         "emphasis": {}
     }
 };
-        chart_cb674245ae2946619671c0d49ff7491d.setOption(option_cb674245ae2946619671c0d49ff7491d);
+        chart_cf249d9fcfad400cb9d638608e7ebddd.setOption(option_cf249d9fcfad400cb9d638608e7ebddd);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>

@@ -2,16 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="57b2cb7850b444428b2828701772f0a5" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="3d4d07246a2a4e24ad9837c4c425574d" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_57b2cb7850b444428b2828701772f0a5 = echarts.init(
-            document.getElementById('57b2cb7850b444428b2828701772f0a5'), 'white', {renderer: 'canvas'});
-        var option_57b2cb7850b444428b2828701772f0a5 = {
+        var chart_3d4d07246a2a4e24ad9837c4c425574d = echarts.init(
+            document.getElementById('3d4d07246a2a4e24ad9837c4c425574d'), 'white', {renderer: 'canvas'});
+        var option_3d4d07246a2a4e24ad9837c4c425574d = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -111,6 +118,7 @@
                 "\u57fa\u5c42\u533b\u7597\u536b\u751f\u673a\u6784\u8bca\u7597\u4eba\u6b21\u6570": true
             },
             "show": true,
+            "bottom": "1%",
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -164,7 +172,15 @@
         }
     ]
 };
-        chart_57b2cb7850b444428b2828701772f0a5.setOption(option_57b2cb7850b444428b2828701772f0a5);
+        chart_3d4d07246a2a4e24ad9837c4c425574d.setOption(option_3d4d07246a2a4e24ad9837c4c425574d);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>

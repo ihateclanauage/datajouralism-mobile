@@ -2,16 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="1413b6a7dfdd4d168f6ebc5ca0bd839a" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="0f56c9d78f3f46faa7201316aabb66d3" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_1413b6a7dfdd4d168f6ebc5ca0bd839a = echarts.init(
-            document.getElementById('1413b6a7dfdd4d168f6ebc5ca0bd839a'), 'white', {renderer: 'canvas'});
-        var option_1413b6a7dfdd4d168f6ebc5ca0bd839a = {
+        var chart_0f56c9d78f3f46faa7201316aabb66d3 = echarts.init(
+            document.getElementById('0f56c9d78f3f46faa7201316aabb66d3'), 'white', {renderer: 'canvas'});
+        var option_0f56c9d78f3f46faa7201316aabb66d3 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -233,7 +240,7 @@
         },
         {
             "type": "line",
-            "name": "\u4e61\u6751\u533b\u751f\u548c\u536b\u751f\u5458\u6570\u91cf",
+            "name": "\u4e61\u6751\u533b\u751f/\u4e61\u6751\u536b\u751f\u5458\u6570\u91cf",
             "connectNulls": false,
             "symbolSize": 4,
             "showSymbol": true,
@@ -420,13 +427,13 @@
         {
             "data": [
                 "\u536b\u751f\u4eba\u5458\u603b\u6570",
-                "\u4e61\u6751\u533b\u751f\u548c\u536b\u751f\u5458\u6570\u91cf"
+                "\u4e61\u6751\u533b\u751f/\u4e61\u6751\u536b\u751f\u5458\u6570\u91cf"
             ],
             "selected": {
                 "\u536b\u751f\u4eba\u5458\u603b\u6570": true,
-                "\u4e61\u6751\u533b\u751f\u548c\u536b\u751f\u5458\u6570\u91cf": true
+                "\u4e61\u6751\u533b\u751f/\u4e61\u6751\u536b\u751f\u5458\u6570\u91cf": true
             },
-            "show": true,
+            "show": false,
             "padding": 5,
             "itemGap": 10,
             "itemWidth": 25,
@@ -546,7 +553,7 @@
         }
     ],
     "toolbox": {
-        "show": true,
+        "show": false,
         "orient": "horizontal",
         "itemSize": 15,
         "itemGap": 10,
@@ -621,7 +628,15 @@
         }
     }
 };
-        chart_1413b6a7dfdd4d168f6ebc5ca0bd839a.setOption(option_1413b6a7dfdd4d168f6ebc5ca0bd839a);
+        chart_0f56c9d78f3f46faa7201316aabb66d3.setOption(option_0f56c9d78f3f46faa7201316aabb66d3);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>

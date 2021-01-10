@@ -2,16 +2,23 @@
 <html>
 <head>
     <meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,maximum-scale=1.0,minimum-scale=1.0,user-scalable=yes">
     <title>Awesome-pyecharts</title>
             <script type="text/javascript" src="https://assets.pyecharts.org/assets/echarts.min.js"></script>
 
+	<style type="text/css">
+            html,body{
+                height:100%;
+                width:100%
+            }
+        </style>
 </head>
-<body>
-    <div id="c5482bca1c7d4c71a75b1ccf3df91d3c" class="chart-container" style="width:900px; height:500px;"></div>
+<body onresize="resizeFresh()">
+    <div id="3934b90a432143159692b71dcf6f74a5" class="chart-container" style="width:95%; height:95%; margin: auto; top: 30px"></div>
     <script>
-        var chart_c5482bca1c7d4c71a75b1ccf3df91d3c = echarts.init(
-            document.getElementById('c5482bca1c7d4c71a75b1ccf3df91d3c'), 'white', {renderer: 'canvas'});
-        var option_c5482bca1c7d4c71a75b1ccf3df91d3c = {
+        var chart_3934b90a432143159692b71dcf6f74a5 = echarts.init(
+            document.getElementById('3934b90a432143159692b71dcf6f74a5'), 'white', {renderer: 'canvas'});
+        var option_3934b90a432143159692b71dcf6f74a5 = {
     "animation": true,
     "animationThreshold": 2000,
     "animationDuration": 1000,
@@ -50,8 +57,6 @@
         {
             "type": "bar",
             "name": "\u5f39\u5e55\u60c5\u611f\u79ef\u6781\u5ea6\u5206\u5e03",
-            "xAxisIndex": 0,
-            "yAxisIndex": 0,
             "legendHoverLink": true,
             "data": [
                 39,
@@ -280,21 +285,17 @@
                 }
             }
         }
-    },
-    "grid": [
-        {
-            "show": false,
-            "zlevel": 0,
-            "z": 2,
-            "top": "20%",
-            "containLabel": false,
-            "backgroundColor": "transparent",
-            "borderColor": "#ccc",
-            "borderWidth": 1
-        }
-    ]
+    }
 };
-        chart_c5482bca1c7d4c71a75b1ccf3df91d3c.setOption(option_c5482bca1c7d4c71a75b1ccf3df91d3c);
+        chart_3934b90a432143159692b71dcf6f74a5.setOption(option_3934b90a432143159692b71dcf6f74a5);
     </script>
+	<script>
+         //窗口大小变化时候，进行刷新页面操作，防止样式混乱
+             var x=window.innerWidth;
+         function resizeFresh(){
+             if(x!=window.innerWidth)
+                 location.reload();
+         }
+     </script>
 </body>
 </html>
